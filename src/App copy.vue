@@ -1,18 +1,17 @@
 <template>
-  <b-container>
-    <SamplePage />
-  </b-container>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import SamplePage from "@/components/pages/SamplePage.vue";
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    SamplePage,
-  },
-};
+    HelloWorld
+  }
+}
 </script>
 
 <style>
