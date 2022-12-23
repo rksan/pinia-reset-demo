@@ -1,29 +1,52 @@
 <template>
-  <p>Check the value of store with "Vue Devtools"</p>
-  <b-form>
-    <b-form-group label="name : ">
-      <b-form-input name="input-name" type="text" v-model="name" />
-    </b-form-group>
-    <b-form-group label="age">
-      <b-form-input name="input-age" type="number" v-model="age" />
-    </b-form-group>
-    <b-form-row>
-      <b-col>
+  <b-form-row>
+    <b-col>
+      <b-form>
+        <b-form-group label="name : ">
+          <b-form-input name="input-name" type="text" v-model="name" />
+        </b-form-group>
+        <b-form-group label="age">
+          <b-form-input name="input-age" type="number" v-model="age" />
+        </b-form-group>
         <b-form-row>
-          <b-button type="button" @click="addStore" variant="primary">
-            add store
-          </b-button>
+          <b-col>
+            <b-form-row>
+              <b-button type="button" @click="addStore" variant="primary">
+                add store
+              </b-button>
+            </b-form-row>
+          </b-col>
+          <b-col>
+            <b-form-row>
+              <b-button type="button" @click="reset" variant="warning">
+                reset store
+              </b-button>
+            </b-form-row>
+          </b-col>
         </b-form-row>
-      </b-col>
-      <b-col>
-        <b-form-row>
-          <b-button type="button" @click="reset" variant="warning">
-            reset
-          </b-button>
-        </b-form-row>
-      </b-col>
-    </b-form-row>
-  </b-form>
+      </b-form>
+    </b-col>
+    <b-col>
+      <b-card-group deck>
+        <b-card
+          title="Current Component data"
+          bg-variant="secondary"
+          text-variant="light"
+        >
+          <b-card-text>name : {{ name }}</b-card-text>
+          <b-card-text>age : {{ age }}</b-card-text>
+        </b-card>
+        <b-card
+          title="Current Pinia store"
+          bg-variant="secondary"
+          text-variant="light"
+        >
+          <b-card-text>name : {{ sampleName }}</b-card-text>
+          <b-card-text>age : {{ sampleAge }}</b-card-text>
+        </b-card>
+      </b-card-group>
+    </b-col>
+  </b-form-row>
 </template>
 
 <script>
