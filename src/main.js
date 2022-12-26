@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, devtools } from "vue";
 import App from "@/App.vue";
 
 import { createPinia } from "pinia";
@@ -13,6 +13,4 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 const pinia = createPinia();
 const app = createApp(App);
 
-app.config.devtools = true;
-
-app.use(pinia).use(BootstrapVue3).mount("#app");
+app.use(pinia).use(BootstrapVue3).use(devtools).mount("#app");
