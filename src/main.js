@@ -13,4 +13,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 const pinia = createPinia();
 const app = createApp(App);
 
+app.config.devtools = true;
+
 app.use(pinia).use(BootstrapVue3).use(devtools).mount("#app");
