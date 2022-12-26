@@ -14,8 +14,8 @@ module.exports = defineConfig({
       // @see : https://stackoverflow.com/questions/64081026/how-use-bundler-build-feature-flags-in-vue-3-0-with-webpack
       // Define Bundler Build Feature Flags
       new webpack.DefinePlugin({
-        // Drop Options API from bundle
-        __VUE_OPTIONS_API__: true,
+        // Vue.js devtools
+        __VUE_PROD_DEVTOOLS__: true,
       }),
     ],
   },

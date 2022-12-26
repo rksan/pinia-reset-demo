@@ -9,7 +9,7 @@
           target="_blank"
           title="Vue.js devtool"
         >
-          <span style="text-decoration: underline"> Vue.js devtool </span>
+          <span style="text-decoration: underline"> Vue.js devtools </span>
           <span> </span>
           <i class="bi bi-box-arrow-up-right"></i>
         </b-button>
