@@ -49,12 +49,11 @@ export const useSampleStore = defineStore("sample-store", () => {
 `./src/components/pages/SamplePage.vue`
 
 ```js
-import { mapState } from "pinia";
+// ...
 import { useSampleStore } from "@/stores/store";
 
 export default {
-  name: "sample-page",
-
+  // ...
   setup() {
     const store = useSampleStore();
     return {
