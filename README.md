@@ -12,7 +12,9 @@ About にあります
 
 ※ 重要な部分のみ抜粋
 
-### `./store/store.js`
+### ストアの定義
+
+`./src/store/store.js`
 
 ```javascript
 import { reactive, readonly, toRefs } from "vue";
@@ -40,6 +42,33 @@ export const useSampleStore = defineStore("sample-store", () => {
     ...actions,
   };
 });
+```
+
+### `Vue.js` コンポーネント
+
+`./src/components/pages/SamplePage.vue`
+
+```javascript
+import { mapState } from "pinia";
+import { useSampleStore } from "@/stores/store";
+
+export default {
+  name: "sample-page",
+
+  setup() {
+    const store = useSampleStore();
+    return {
+      store,
+    };
+  },
+  // ...
+  methods: {
+    // ...
+    reset() {
+      this.store.reset();
+    },
+  },
+};
 ```
 
 </html>
