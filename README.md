@@ -16,7 +16,7 @@ About にあります
 
 `./src/store/store.js`
 
-```javascript
+```js
 import { reactive, readonly, toRefs } from "vue";
 import { defineStore } from "pinia";
 import cloneDeep from "lodash.clonedeep";
@@ -48,7 +48,7 @@ export const useSampleStore = defineStore("sample-store", () => {
 
 `./src/components/pages/SamplePage.vue`
 
-```javascript
+```js
 import { mapState } from "pinia";
 import { useSampleStore } from "@/stores/store";
 
