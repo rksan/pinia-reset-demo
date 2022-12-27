@@ -11,8 +11,5 @@ import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const pinia = createPinia();
-//const app = createApp(App);
-
-// app.config.devtools = true;
 
 createApp(App).use(pinia).use(BootstrapVue3).mount("#app");

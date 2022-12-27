@@ -3,7 +3,7 @@
     <h1>Demo of resetting Pinia's read-only state</h1>
     <b-card-header>
       <b-card-text>
-        <span>Check using</span>
+        <span>Check "SamplePage" component and "sample-store" Pinia in</span>
         <b-button
           href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd"
           target="_blank"
@@ -90,6 +90,8 @@ import { mapState } from "pinia";
 import { useSampleStore } from "@/stores/store";
 
 export default {
+  name: "sample-page",
+
   setup() {
     const store = useSampleStore();
 
