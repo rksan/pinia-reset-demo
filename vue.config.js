@@ -11,12 +11,14 @@ module.exports = defineConfig({
       require("unplugin-vue-components/webpack")({
         /* options */
       }),
-      // @see : https://stackoverflow.com/questions/64081026/how-use-bundler-build-feature-flags-in-vue-3-0-with-webpack
-      // Define Bundler Build Feature Flags
-      new webpack.DefinePlugin({
-        // Vue.js devtools
-        __VUE_PROD_DEVTOOLS__: true,
-      }),
     ],
   },
+  chainWebpack: (config) =>
+    config.plugin("feature-flags").use(webpack.DefinePlugin, [
+      {
+        // __VUE_OPTIONS_API__: JSON.stringify(true),
+        // __VUE_PROD_DEVTOOLS__: JSON.stringify(false),
+        __VUE_PROD_DEVTOOLS__: JSON.stringify(true),
+      },
+    ]),
 });
